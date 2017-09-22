@@ -3,28 +3,26 @@ Archive member included to satisfy reference by file (symbol)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
                               Mocca_Treiber.o (__udivmodsi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
-                              C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o (exit)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
                               Mocca_Demo.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
-                              Mocca_Demo.o (__do_clear_bss)
+                              Mocca_Treiber.o (__do_clear_bss)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
                               Mocca_Demo.o (__umulhisi3)
 
 Allocating common symbols
 Common symbol       size              file
 
-Helligkeit          0x2               Mocca_Demo.o
 takt_5ms_zaehler    0x2               Mocca_Treiber.o
 
 Discarded input sections
 
- .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
  .text          0x00000000        0x0 Mocca_Demo.o
  .data          0x00000000        0x0 Mocca_Demo.o
  .bss           0x00000000        0x0 Mocca_Demo.o
- COMMON         0x00000000        0x2 Mocca_Demo.o
  .text          0x00000000        0x0 Mocca_Treiber.o
  .data          0x00000000        0x0 Mocca_Treiber.o
  .bss           0x00000000        0x0 Mocca_Treiber.o
@@ -40,6 +38,8 @@ Discarded input sections
                 0x00000000       0x1a Mocca_Treiber.o
  .text.USB_sende_string
                 0x00000000       0x2c Mocca_Treiber.o
+ .text.init_RGB
+                0x00000000       0x1a Mocca_Treiber.o
  .text.PWM_RGB  0x00000000       0x2e Mocca_Treiber.o
  .text.RGB_Rot  0x00000000       0x30 Mocca_Treiber.o
  .text.RGB_Gruen
@@ -131,7 +131,7 @@ Name             Origin             Length             Attributes
 text             0x00000000         0x00100000         xr
 data             0x00800200         0x0000fe00         rw !x
 eeprom           0x00810000         0x00010000         rw !x
-fuse             0x00820000         0x00000400         rw !x
+fuse             0x00820000         0x00000003         rw !x
 lock             0x00830000         0x00000400         rw !x
 signature        0x00840000         0x00000400         rw !x
 user_signatures  0x00850000         0x00000400         rw !x
@@ -140,7 +140,7 @@ user_signatures  0x00850000         0x00000400         rw !x
 Linker script and memory map
 
 Address of section .data set to 0x800200
-LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
 LOAD Mocca_Demo.o
 LOAD Mocca_Treiber.o
 START GROUP
@@ -150,12 +150,12 @@ START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libm.a
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a
-LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6\libatmega2560.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libatmega2560.a
 END GROUP
                 0x00100000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x100000
                 0x0000fe00                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xfe00
                 0x00010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
-                0x00000400                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                [0x00000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
                 0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
                 0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
                 0x00000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
@@ -250,9 +250,9 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x88a
+.text           0x00000000      0x96e
  *(.vectors)
- .vectors       0x00000000       0xe4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .vectors       0x00000000       0xe4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
@@ -280,13 +280,13 @@ END GROUP
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000e4        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init0         0x000000e4        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
                 0x000000e4                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000e4       0x10 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init2         0x000000e4       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
  *(.init2)
  *(.init3)
  *(.init3)
@@ -305,10 +305,10 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000011e        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init9         0x0000011e        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
  *(.init9)
  *(.text)
- .text          0x00000122        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .text          0x00000122        0x2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
                 0x00000122                __vector_38
                 0x00000122                __vector_22
                 0x00000122                __vector_28
@@ -368,74 +368,71 @@ END GROUP
                 0x00000124                . = ALIGN (0x2)
  *(.text.*)
  .text.send_data
-                0x00000124       0x3c Mocca_Demo.o
+                0x00000124       0x58 Mocca_Demo.o
                 0x00000124                send_data
  .text.recieve_data
-                0x00000160       0x26 Mocca_Demo.o
-                0x00000160                recieve_data
- .text.main     0x00000186       0xaa Mocca_Demo.o
-                0x00000186                main
+                0x0000017c       0x48 Mocca_Demo.o
+                0x0000017c                recieve_data
+ .text.main     0x000001c4      0x16a Mocca_Demo.o
+                0x000001c4                main
  .text.init_5ms_timer
-                0x00000230       0x14 Mocca_Treiber.o
-                0x00000230                init_5ms_timer
+                0x0000032e       0x14 Mocca_Treiber.o
+                0x0000032e                init_5ms_timer
  .text.__vector_23
-                0x00000244       0xac Mocca_Treiber.o
-                0x00000244                __vector_23
+                0x00000342       0xac Mocca_Treiber.o
+                0x00000342                __vector_23
  .text.wait_5ms
-                0x000002f0       0x1a Mocca_Treiber.o
-                0x000002f0                wait_5ms
+                0x000003ee       0x1a Mocca_Treiber.o
+                0x000003ee                wait_5ms
  .text.wait_1us
-                0x0000030a       0x4a Mocca_Treiber.o
-                0x0000030a                wait_1us
+                0x00000408       0x4a Mocca_Treiber.o
+                0x00000408                wait_1us
  .text.init_ADC
-                0x00000354       0x30 Mocca_Treiber.o
-                0x00000354                init_ADC
+                0x00000452       0x30 Mocca_Treiber.o
+                0x00000452                init_ADC
  .text.read_ADC
-                0x00000384       0x64 Mocca_Treiber.o
-                0x00000384                read_ADC
- .text.init_RGB
-                0x000003e8       0x1a Mocca_Treiber.o
-                0x000003e8                init_RGB
- .text.lcd_sid  0x00000402        0xc Mocca_Treiber.o
-                0x00000402                lcd_sid
+                0x00000482       0x64 Mocca_Treiber.o
+                0x00000482                read_ADC
+ .text.lcd_sid  0x000004e6        0xc Mocca_Treiber.o
+                0x000004e6                lcd_sid
  .text.lcd_sclk
-                0x0000040e        0xc Mocca_Treiber.o
-                0x0000040e                lcd_sclk
+                0x000004f2        0xc Mocca_Treiber.o
+                0x000004f2                lcd_sclk
  .text.lcd_on_off
-                0x0000041a        0xc Mocca_Treiber.o
-                0x0000041a                lcd_on_off
+                0x000004fe        0xc Mocca_Treiber.o
+                0x000004fe                lcd_on_off
  .text.lcd_light
-                0x00000426       0x22 Mocca_Treiber.o
-                0x00000426                lcd_light
+                0x0000050a       0x22 Mocca_Treiber.o
+                0x0000050a                lcd_light
  .text.write_lcd_f
-                0x00000448       0xea Mocca_Treiber.o
-                0x00000448                write_lcd_f
+                0x0000052c       0xea Mocca_Treiber.o
+                0x0000052c                write_lcd_f
  .text.write_text
-                0x00000532       0x42 Mocca_Treiber.o
-                0x00000532                write_text
+                0x00000616       0x42 Mocca_Treiber.o
+                0x00000616                write_text
  .text.write_zahl
-                0x00000574      0x1f6 Mocca_Treiber.o
-                0x00000574                write_zahl
+                0x00000658      0x1f6 Mocca_Treiber.o
+                0x00000658                write_zahl
  .text.clear_lcd_f
-                0x0000076a       0x1c Mocca_Treiber.o
-                0x0000076a                clear_lcd_f
+                0x0000084e       0x1c Mocca_Treiber.o
+                0x0000084e                clear_lcd_f
  .text.init_lcd
-                0x00000786       0x7a Mocca_Treiber.o
-                0x00000786                init_lcd
+                0x0000086a       0x7a Mocca_Treiber.o
+                0x0000086a                init_lcd
  .text.init_mocca
-                0x00000800       0x24 Mocca_Treiber.o
-                0x00000800                init_mocca
+                0x000008e4       0x24 Mocca_Treiber.o
+                0x000008e4                init_mocca
  .text.libgcc.div
-                0x00000824       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
-                0x00000824                __udivmodsi4
+                0x00000908       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
+                0x00000908                __udivmodsi4
  .text.libgcc.mul
-                0x00000868       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
-                0x00000868                __umulhisi3
-                0x00000886                . = ALIGN (0x2)
+                0x0000094c       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
+                0x0000094c                __umulhisi3
+                0x0000096a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000886        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
-                0x00000886                _exit
-                0x00000886                exit
+ .fini9         0x0000096a        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x0000096a                _exit
+                0x0000096a                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -454,47 +451,46 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000886        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+ .fini0         0x0000096a        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000088a                _etext = .
+                0x0000096e                _etext = .
 
-.data           0x00800200       0x5a load address 0x0000088a
+.data           0x00800200       0x88 load address 0x0000096e
                 0x00800200                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800200       0x19 Mocca_Demo.o
+                0x00800200       0x48 Mocca_Demo.o
  .rodata.str1.1
-                0x00800219       0x40 Mocca_Treiber.o
+                0x00800248       0x40 Mocca_Treiber.o
                                  0x42 (size before relaxing)
  *(.gnu.linkonce.d*)
-                0x0080025a                . = ALIGN (0x2)
- *fill*         0x00800259        0x1 
-                0x0080025a                _edata = .
-                0x0080025a                PROVIDE (__data_end, .)
+                0x00800288                . = ALIGN (0x2)
+                0x00800288                _edata = .
+                0x00800288                PROVIDE (__data_end, .)
 
-.bss            0x0080025a        0x6
-                0x0080025a                PROVIDE (__bss_start, .)
+.bss            0x00800288        0x6
+                0x00800288                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.cnt       0x0080025a        0x2 Mocca_Treiber.o
-                0x0080025a                cnt
- .bss.time_cnt  0x0080025c        0x2 Mocca_Treiber.o
-                0x0080025c                time_cnt
+ .bss.cnt       0x00800288        0x2 Mocca_Treiber.o
+                0x00800288                cnt
+ .bss.time_cnt  0x0080028a        0x2 Mocca_Treiber.o
+                0x0080028a                time_cnt
  *(COMMON)
- COMMON         0x0080025e        0x2 Mocca_Treiber.o
-                0x0080025e                takt_5ms_zaehler
-                0x00800260                PROVIDE (__bss_end, .)
-                0x0000088a                __data_load_start = LOADADDR (.data)
-                0x000008e4                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0080028c        0x2 Mocca_Treiber.o
+                0x0080028c                takt_5ms_zaehler
+                0x0080028e                PROVIDE (__bss_end, .)
+                0x0000096e                __data_load_start = LOADADDR (.data)
+                0x000009f6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800260        0x0
+.noinit         0x0080028e        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800260                _end = .
+                0x0080028e                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -543,7 +539,7 @@ END GROUP
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
  .note.gnu.avr.deviceinfo
-                0x00000000       0x40 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.0.106/gcc/dev/atmega2560/avr6/crtatmega2560.o
+                0x00000000       0x40 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -570,37 +566,41 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xed6
+.debug_info     0x00000000     0x1caf
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x388 Mocca_Demo.o
- .debug_info    0x00000388      0xb4e Mocca_Treiber.o
+ .debug_info    0x00000000      0xbbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .debug_info    0x00000bbc      0x5a5 Mocca_Demo.o
+ .debug_info    0x00001161      0xb4e Mocca_Treiber.o
 
-.debug_abbrev   0x00000000      0x331
+.debug_abbrev   0x00000000      0xe58
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x11d Mocca_Demo.o
- .debug_abbrev  0x0000011d      0x214 Mocca_Treiber.o
+ .debug_abbrev  0x00000000      0xb1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .debug_abbrev  0x00000b1a      0x12a Mocca_Demo.o
+ .debug_abbrev  0x00000c44      0x214 Mocca_Treiber.o
 
-.debug_line     0x00000000      0xa6f
+.debug_line     0x00000000      0xbbd
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000      0x1ef Mocca_Demo.o
- .debug_line    0x000001ef      0x880 Mocca_Treiber.o
+ .debug_line    0x00000000       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .debug_line    0x0000001a      0x323 Mocca_Demo.o
+ .debug_line    0x0000033d      0x880 Mocca_Treiber.o
 
-.debug_frame    0x00000000      0x320
+.debug_frame    0x00000000      0x324
  *(.debug_frame)
- .debug_frame   0x00000000       0x50 Mocca_Demo.o
- .debug_frame   0x00000050      0x2d0 Mocca_Treiber.o
+ .debug_frame   0x00000000       0x54 Mocca_Demo.o
+ .debug_frame   0x00000054      0x2d0 Mocca_Treiber.o
 
-.debug_str      0x00000000      0x37d
+.debug_str      0x00000000      0x783
  *(.debug_str)
- .debug_str     0x00000000      0x1be Mocca_Demo.o
-                                0x1f7 (size before relaxing)
- .debug_str     0x000001be      0x1bf Mocca_Treiber.o
-                                0x389 (size before relaxing)
+ .debug_str     0x00000000      0x3e6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6/crtatmega2560.o
+ .debug_str     0x000003e6      0x1b3 Mocca_Demo.o
+                                0x1ec (size before relaxing)
+ .debug_str     0x00000599      0x1ea Mocca_Treiber.o
+                                0x375 (size before relaxing)
 
-.debug_loc      0x00000000      0xc89
+.debug_loc      0x00000000      0xd5e
  *(.debug_loc)
- .debug_loc     0x00000000       0xfc Mocca_Demo.o
- .debug_loc     0x000000fc      0xb8d Mocca_Treiber.o
+ .debug_loc     0x00000000      0x1d1 Mocca_Demo.o
+ .debug_loc     0x000001d1      0xb8d Mocca_Treiber.o
 
 .debug_macinfo
  *(.debug_macinfo)

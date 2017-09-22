@@ -159,6 +159,7 @@ void main(void)
 		{
 			send_data(data,send_to);
 
+			//show sending information
 			clear_lcd_f();
 			write_text(0,2,"Gesendet:");
 			write_zahl(1,7,data,4,0,0);
@@ -184,6 +185,5 @@ void main(void)
 			clear_lcd_f();
 			wait_5ms(400);
 		}
-			
 	}
 }
